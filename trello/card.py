@@ -506,11 +506,11 @@ class Card(TrelloBase):
 
     @property
     def due_date(self):
-        return dateparser.parse(self.due) if self.due else ''
+        return dateparser.parse(self.due) if self.due else None
 
     @property
     def start_date(self):
-        return dateparser.parse(self.start) if self.start else ''
+        return dateparser.parse(self.start) if self.start else None
 
     def set_name(self, new_name):
         """Update the name on the card to :new_name:
