@@ -196,7 +196,7 @@ class Card(TrelloBase):
         self.badges = json_obj['badges']
         self.pos = json_obj['pos']
         self.due = json_obj.get('due', '')
-        card.start = json_obj.get('start', '')
+        self.start = json_obj.get('start', '')
         self.checked = json_obj['checkItemStates']
         self.dateLastActivity = dateparser.parse(json_obj['dateLastActivity'])
 
